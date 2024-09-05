@@ -34,19 +34,3 @@ export const validateUser = [
     
     validate()
 ];
-
- export const validateRelation = [
-    check('sender')
-        .isLength({min: 3, max: 12})
-        .withMessage('sender must be between 3 and 12 characters'),
-    
-    check('from')
-        .isLength({min: 3, max: 12})
-        .withMessage('from must be between 3 and 12 characters'),
-
-    validate()
- ];
-
- export const validateContact = [
-    
- ];
