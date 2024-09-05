@@ -1,0 +1,11 @@
+{
+  "name": "login-reg-mysql",
+  "version": "0.0.3",
+  "description": "simple login and register using node.js express and mysql",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "darrell parkhouse",
+  "license": "MIT"
+}
