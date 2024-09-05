@@ -1,3 +1,6 @@
+create database `log_reg_2024`;
+use `log_reg_2024`;
+
 create table `users` (
     `u_id` int(11) unsigned NOT NULL,
     `u_name` varchar(255) NOT NULL,
@@ -5,6 +8,10 @@ create table `users` (
     `password` varchar(255) NOT NULL,
     `profile_pic` varchar(255) NOT NULL
 );
+
+
+alter table users
+    add column `u_id` int(11) primary key auto_increment first;
 
 
 create table `notifications` (
@@ -20,4 +27,12 @@ create table `notifications` (
 
 create table `tasks` (
     `task_id` int(11) primary key auto_increment,
+    `title` varchar(255) not null,
+    `description` text not null,
+    `assigned_to` varchar(255) not null,
+    `due_date` datetime,
+    `priority` enum('low', 'medium', 'moderate', 'high') default 'medium',
+    `task_status` enum('in-progress', 'complete', 'pending', 'aborted'),
+    `modifed_date` datetime,
+    `created_at` datetime default current_timestamp
 )
